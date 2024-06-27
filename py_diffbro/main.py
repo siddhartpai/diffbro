@@ -37,8 +37,8 @@ def main():
         "-o",
         "--model",
         type=str,
-        default="gpt-4",
-        help="GPT model use 'gpt-3.5-turbo' or 'gpt-4'",
+        default="gpt-4o",
+        help="GPT model use 'gpt-3.5-turbo' or 'gpt-4' or 'gpt-4o'",
     )
     parser.add_argument(
         "--only",
@@ -76,9 +76,9 @@ def main():
         bro_mode = BroMode.MID
     elif args.chad:
         bro_mode = BroMode.CHAD
-        if model != "gpt-4":
+        if model != "gpt-4o":
             user_input = input(
-                "Chad mode is engaged. It is suggested to use 'gpt-4' model for optimal results. Do you want to switch to 'gpt-4'? (y/n): "
+                "Chad mode is engaged. It is suggested to use 'gpt-4o' model for optimal results. Do you want to switch to 'gpt-4o'? (y/n): "
             )
             if user_input.lower() in ["yes", "y"]:
                 model = "gpt-4"

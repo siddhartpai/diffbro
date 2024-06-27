@@ -1,4 +1,4 @@
-# diffbro - AI Powered Peer Reviews
+#diffbro - AI Powered Peer Reviews
 
 *Your AI Peer Review Bro*
 
@@ -36,7 +36,8 @@ Diffbro is best used before you stage and commit your code to your codebase. Dif
 
 - Choose your gpt model
   - `diffbro --model gpt-3.5-turbo`
-  - `diffbro --model gpt-4` (default) (recommended for production code)
+  - `diffbro --model gpt-4`
+  - `diffbro --model gpt-4o` (default) (recommended for production code)
 
 - Summarize the git diff for a commit message or PR description
   - `diffbro --summarize`
@@ -48,9 +49,9 @@ Diffbro is best used before you stage and commit your code to your codebase. Dif
   - '*I want a chill review on my .py and .js files*'
     - `diffbro --chill --only .py .js`
   - '*I'm about to ship production, mission critical UI code, I need a hardcore review on my FE code*'
-    - `diffbro --chad --model gpt-4 --only .js .jsx .tsx .vue`
+    - `diffbro --chad --model gpt-4o --only .js .jsx .tsx .vue`
   - '*I'm about to a fullstack app and need a comprehensive mid level review on all my code excluding .tsx files*'
-    - `diffbro --mid --model gpt-4 --ignore .tsx`
+    - `diffbro --mid --model gpt-4o --ignore .tsx`
   - '*I want to run my own prompt against my git diff with a summary for the commit massage*'
     - `diffbro --prompt "Below is a git diff of code. Please review and notify only of critical issues." --summarize`
   - '*I want a quick comparison of my changes against the staging branch with a summary*'
@@ -59,7 +60,7 @@ Diffbro is best used before you stage and commit your code to your codebase. Dif
     - `diffbro --mid --only .ts`
   - '*I want top tier code reviews all the time*'
     - Throw this line into your `.bashrc` or `.bash_profile`
-      - `alias dbro="diffbro --chad --model gpt-4 --summarize"`
+      - `alias dbro="diffbro --chad --model gpt-4o --summarize"`
     - Then, whenever you want a review, just run
       - `dbro`
 
@@ -139,7 +140,7 @@ Diffbro is best used before you stage and commit your code to your codebase. Dif
 
 [✅] Improve openai_api_key check
 
-[✅] Chad should always ask to use gpt-4 (simple yes/no prompt)
+[✅] Chad should always ask to use gpt-4o (simple yes/no prompt)
 
 [✅] Add custom prompt flag to be run on the diff
   `diffbro --prompt "Below is a git diff of code. Please review and notify only of critical issues."`

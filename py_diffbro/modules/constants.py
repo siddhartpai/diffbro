@@ -28,6 +28,7 @@ PROGRAMMING_FILE_EXTENSIONS = [
     ".md",
     ".go",
     ".rs",
+    ".rb",
     ".swift",
 ]
 
